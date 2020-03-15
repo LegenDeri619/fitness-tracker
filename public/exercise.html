@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <!-- jQuery CDN -->
+  <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css" />
+  <title>Fitness Tracker</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo center">Fitness Tracker</a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="/stats">Stats</a></li>
+        <!-- <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">JavaScript</a></li> -->
+      </ul>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="card">
+      <div class="card-content">
+        <h2>Add Your Exercise</h2>
+        <form action="POST">
+          
+          <div class="muscleGroup">
+            <label for="muscleGroup">Muscle Group:</label>
+            <input type="text" name="muscleGroup" id="muscleGroup" placeholder="ie: Arm, Chest, Back, Legs, Shoulders, Core, or Cardio" />
+          </div>
+
+          <div class="exercise">
+            <label for="name">Exercise Name:</label>
+            <input type="text" name="name" id="name" placeholder="Bench Press" />
+          </div>
+
+          <div class="weight">
+            <label for="weight">Weight (lbs):</label>
+            <input type="number" name="weight" id="weight" placeholder="200" />
+          </div>
+
+          <div class="sets">
+            <label for="sets">Sets:</label>
+            <input type="number" name="sets" id="sets" placeholder="4" />
+          </div>
+
+          <div class="reps">
+            <label for="reps">Reps:</label>
+            <input type="number" name="reps" id="reps" placeholder="10" />
+          </div>
+
+          <div class="duration">
+            <label for="duration">Duration (minutes):</label>
+            <input type="number" name="duration" id="duration" placeholder="10" />
+          </div>
+          
+          <div class="distance">
+            <label for="distance">Distance (miles):</label>
+            <input type="number" name="distance" id="distance" placeholder="5" />
+          </div>
+
+          <div class="buttons">
+            <button disabled class="blue button complete">
+              Complete
+            </button>
+            <button class="button add-another">
+              Add Exercise
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+  <script src="/api.js"></script>
+  <script src="/exercise.js"></script>
+</body>
+
+</html>
